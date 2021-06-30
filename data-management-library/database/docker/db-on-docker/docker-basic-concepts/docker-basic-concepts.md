@@ -85,7 +85,7 @@ In this lab, you will:
     </copy>
     ````
 
-7. Next, as the root user, we are going to install git using yum (package management tool for Linux). We will need git in the next lab. Enter `y` when asked.
+7. Next, as the root user, we are going to install git using yum (package management tool for Linux). We will need git in the next lab. Enter `y` when prompted.
 
     ````
     <copy>
@@ -141,13 +141,14 @@ In this lab, you will:
 
     ![](images/dockerversion2.png " ")
 
-2. Start your application, restclient, in docker on port 8002 in json format.
+2. Start your application, restclient, in docker on port 8002 in json format and verify if containers are running.
 
 
     ````
     <copy>
     docker ps
     docker run -d -it --rm --name restclient -p=8002:8002 -e DS='json' wvbirder/restclient
+    docker ps -a
     </copy>
     ````
 

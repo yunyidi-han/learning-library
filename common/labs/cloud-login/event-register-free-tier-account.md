@@ -24,7 +24,7 @@ Oracle Cloud Free Tier allows you to sign up for an Oracle Cloud account which p
 
 If you already have a cloud account, skip to **STEP 2**.
 
-1. Open up a web browser to access the Oracle Cloud account registration form at [oracle.com/cloud/free](https://myservices.us.oraclecloud.com/mycloud/signup?language=en).
+1. Open up a web browser to access the Oracle Cloud account registration form at [oracle.com/cloud/free](https://signup.cloud.oracle.com).
 
 2.  You will be presented with a registration page.
     ![](images/cloud-infrastructure.png " ")
@@ -84,23 +84,8 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 
 You may now [proceed to the next lab](#next).
 
-## **Rate this Workshop**
-
-When you are finished don't forget to rate this workshop!  We rely on this feedback to help us improve and refine our LiveLabs catalog.  Follow the steps to submit your rating.
-
-1.  Go back to your **workshop homepage** in LiveLabs by going back to your workshop and clicking the Launch button.
-
-2.  Click on the **Brown Button** to re-access the workshop
-
-    ![](images/workshop-homepage-2.png " ")
-
-3.  Click **Rate this workshop**
-
-    ![](images/rate-this-workshop.png " ")
-
 
 ## **Acknowledgements**
 
 - **Created By/Date** - Anoosha Pilli, Product Manager, February 2021
-- **Last Updated By** - Anoosha Pilli, February 2021
-
+- **Last Updated By** - Tom McGinn, June 2021

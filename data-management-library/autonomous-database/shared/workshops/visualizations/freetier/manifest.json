@@ -8,14 +8,15 @@
             "filename": "./../../../intro/intro-ziplab.md"
         },
         {
-            "title": "Getting Started",
+            "title": "Get Started",
             "description": "Get a Free Trial",
             "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
             "title": "Lab 1: Provision an ADW Instance",
             "description": "Provision a new ADW instance and connect to the database",
-            "filename": "./../../../adb-provision/adb-provision.md"
+            "type": "freetier",
+            "filename": "./../../../adb-provision/adb-provision-conditional.md"
         },
         {
             "title": "Lab 2: Explore SQL Developer Web",
@@ -23,12 +24,13 @@
             "filename": "./../../../adb-sqldevweb/adb-sqldevweb.md"
         },
         {
-            "title": "Lab 3: Loading Data",
+            "title": "Lab 3: Load Data",
             "description": "Load data into ADB",
-            "filename": "./../../../adb-loading/adb-loading.md"
+            "type": "freetier",
+            "filename": "./../../../adb-loading/adb-loading-conditional.md"
         },
         {
-            "title": "Lab 4: Visualizing Your Data",
+            "title": "Lab 4: Visualize Your Data",
             "description": "Create Rich Data Visualizations",
             "filename": "./../../../adw-visualizations/adw-visualizations.md"
         },

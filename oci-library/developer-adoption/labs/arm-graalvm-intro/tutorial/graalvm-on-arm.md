@@ -34,14 +34,7 @@ As an example of an existing Java application, we can run the [Spring PetClinic]
     $<copy>git clone https://github.com/spring-projects/spring-petclinic.git</copy>
     ```
 
-2. To run the sample application without modifications, open the port on which the application will listen (8080 by default). 
-
-    ```
-    $<copy>sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp </copy>
-    $<copy>sudo firewall-cmd --reload</copy>
-    ```
-
-3. Build and run the application.
+2. Build and run the application.
 
     ```
     $<copy>cd spring-petclinic</copy>

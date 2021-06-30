@@ -2,15 +2,13 @@
 
 ## Introduction
 
-In this lab we will get the workflow template and install SQLcl.
+We will get the workflow template and install Oracle SQLcl.
 
 Oracle SQLcl integrates a version of Liquibase, which is used extensively to track database schema changes in this workshop.
 
-Estimated Lab Time: 5 minutes.
+Estimated Completion Time: 5 minutes.
 
 ### Objectives
-
-In this lab you will:
 
 - Get the repository template.
 - Install Oracle SQLcl.
@@ -19,7 +17,7 @@ In this lab you will:
 
 1. Go to the github repository [https://github.com/oracle-quickstart/oci-apex-workflow-template](https://github.com/oracle-quickstart/oci-apex-workflow-template) and click **Use this Template**.
 
-  ![](./images/template.png)
+  ![](./images/template.png " ")
 
 2. Enter a repository name of your choice.
 
@@ -39,10 +37,8 @@ In this lab you will:
     </copy>
     ```
 
-You may proceed to the next lab.
 
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, Vanitha Subramanyam, March 2021
  - **Last Updated By/Date** - Emmanuel Leroy, Vanitha Subramanyam, March 2021
-

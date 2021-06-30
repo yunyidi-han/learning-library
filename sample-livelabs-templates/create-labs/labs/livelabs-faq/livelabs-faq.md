@@ -59,7 +59,9 @@ For questions related to LiveLabs please review this FAQ. If you don't see an an
     -	Workshop videos can only be sourced from one of the official Oracle Youtube channels.  We have a LiveLabs YouTube channel.  Submit the video to [livelabs-help-db_us@oracle.com](livelabs-help-db_us@oracle.com) and we will review and upload it.
 5.	How to create a custom image from the Marketplace?
     -	Refer to [this](https://rpastijn.github.io/stuff/?lab=custom-image-mp-image) documentation on Github.
-6. What to do if my github local and staging environment are corrupted and need to delete it and then rebuilt it?
+6. Where can I locate the Self QA Checklist?
+    -   When you're ready to Self-QA, change your workshop status to "Self QA". This will trigger an e-mail containing the Self QA Checklist. It can also be found [here](https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/fileview/D5385E6AE8CA617113BE4F6D862E696CB42A09614240).
+7. What to do if my github local and staging environment are corrupted and need to delete it and then rebuilt it?
     - Instructions to delete a forked repo on Github:
         - Go to Settings of Repo you want to unfork
         - Scroll down till danger zone section and click Delete this Repository
@@ -67,7 +69,7 @@ For questions related to LiveLabs please review this FAQ. If you don't see an an
         - Click “I understand the consequences, delete this repository” button.
     - Delete the same repo you just deleted on Github on your local machine as well.
     - After the successful deletion of repo on Github and local machine, follow the instructions from step 7 in lab 1 - Get Started with Git and Set up the GitHub Environment to rebuilt the repo.
-7.	Any questions related to Github?
+8.	Any questions related to Github?
     -	Join the Slack channel: #livelabs-authors-help and ask the question in the channel.
 
 ## **Workshops FAQ**

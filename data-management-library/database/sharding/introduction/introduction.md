@@ -21,28 +21,28 @@ The differences between the `ADD SHARD` and `CREATE SHARD` methods are explained
 
 - **ADD SHARD Method**
 
-   The `GDSCTL ADD SHARD` command can be used to add a shard to an Oracle Sharding configuration. When using this command, you are responsible for creating the Oracle databases that will become shards during deployment. You can use whatever method you want to create the databases as long as the databases meet the prerequisites for inclusion in an Oracle Sharding configuration.
+    The `GDSCTL ADD SHARD` command can be used to add a shard to an Oracle Sharding configuration. When using this command, you are responsible for creating the Oracle databases that will become shards during deployment. You can use whatever method you want to create the databases as long as the databases meet the prerequisites for inclusion in an Oracle Sharding configuration.
 
-   Some of the benefits of using the `ADD SHARD` method include:
+    Some of the benefits of using the `ADD SHARD` method include:
 
-   - You have complete control over the process used to create the databases.
-   - It is straightforward to customize database parameters, naming, and storage locations.
-   - Both PDB and non-CDB shards are supported.
-   - There is less Oracle software to configure on the shard hosts.
-   - There is much less complexity in the deployment process because the shard databases are created before you run any `GDSCTL` commands.
+    - You have complete control over the process used to create the databases.
+    - It is straightforward to customize database parameters, naming, and storage locations.
+    - Both PDB and non-CDB shards are supported.
+    - There is less Oracle software to configure on the shard hosts.
+    - There is much less complexity in the deployment process because the shard databases are created before you run any `GDSCTL` commands.
 
 
 
 - **CREATE SHARD Method**
 
-   The `GDSCTL CREATE SHARD` command can be used to create a shard in an Oracle Sharding configuration. With `CREATE SHARD`, the shard catalog leverages the Oracle Remote Scheduler Agent to run the Database Configuration Assistant (DBCA) remotely on each shard host to create a database for you. This method does not support PDBs, so any shard databases added must be non-CDBs.
+    The `GDSCTL CREATE SHARD` command can be used to create a shard in an Oracle Sharding configuration. With `CREATE SHARD`, the shard catalog leverages the Oracle Remote Scheduler Agent to run the Database Configuration Assistant (DBCA) remotely on each shard host to create a database for you. This method does not support PDBs, so any shard databases added must be non-CDBs.
 
-   Some of the benefits of using the `CREATE SHARD` method include:
+    Some of the benefits of using the `CREATE SHARD` method include:
 
-   - It is easier to create shard databases for non-database administrators.
-   - It provides a standard way to provision a new database, when no standard is in current practice.
-   - Any database created with `CREATE SHARD` is automatically configured correctly for Oracle Sharding without the need to run SQL statements against the database or otherwise adjust database parameters.
-   - You can create standby databases automatically.
+    - It is easier to create shard databases for non-database administrators.
+    - It provides a standard way to provision a new database, when no standard is in current practice.
+    - Any database created with `CREATE SHARD` is automatically configured correctly for Oracle Sharding without the need to run SQL statements against the database or otherwise adjust database parameters.
+    - You can create standby databases automatically.
 
 
 
@@ -75,11 +75,7 @@ In order to do this workshop, you need
 
 ## Acknowledgements
 
-* **Author** - Minqiao Wang, DB Product Management, Dec 2020
-* **Contributors** -  
-* **Last Updated By/Date** - Minqiao Wang, DB Product Management, Apr 2021
+* **Author** - Minqiao Wang, DB Product Management, Dec 2020 
+* **Last Updated By/Date** - Minqiao Wang, Jun 2021
 * **Workshop Expiry Date** - 25 April 2022
 
-
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.

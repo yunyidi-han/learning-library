@@ -2,23 +2,21 @@
 
 ## Introduction
 
-In this lab we will install the software required to run the stack to deploy an OKE cluster with OCI Service Broker.
+You will install the software required to run the stack to deploy an Oracle Kubernetes Engine (OKE) cluster with Oracle Cloud Infrastructure (OCI) Service Broker.
 
-Because the OCI Service Broker depends on Service Catalog, as well as the key vlaue store etcd, all of which are deployed as Helm charts in Kubernetes. we need kubectl, as well as helm installed to run the stack. Furthermore the OCI CLI is used for some tasks and is required for kubectl.
+Note that you must install `kubectl`, as well as Helm, to run the stack. This is because the OCI Service Broker depends on Service Catalog, as well as the key value store, `etcd`, all of which are deployed as Helm charts in Kubernetes. Furthermore, the OCI command-line interface (CLI) is used for some tasks and is required for `kubectl`.
 
-Estimated Lab Time: 10 minutes.
+Estimated Time: 10 minutes.
 
 ### Objectives
 
-In this lab you will:
-
 - Install the OCI CLI.
-- Install kubectl >= 1.18 if not already present.
+- Install `kubectl` 1.18 or later if not already present.
 - install Helm 3.x.
 
-## **STEP 1:** Install the OCI CLI
+## **STEP 1:** Install the Oracle Cloud Infrastructure CLI
 
-1. To install the OCI CLI on Linux or Mac OS X, run the command:
+1. To install the Oracle Cloud Infrastructure (OCI) CLI on Linux or Mac OS X, run the following command:
 
     ```bash
     <copy>
@@ -29,7 +27,8 @@ In this lab you will:
     Press **Enter** to use the defaults for all options.
 
 2. Restart your shell.
-    ```
+
+    ```bash
     <copy>
     exec -l $SHELL
     </copy>
@@ -37,7 +36,7 @@ In this lab you will:
 
 3. Configure the OCI CLI.
 
-    ```
+    ```bash
     <copy>
     oci setup config
     </copy>
@@ -65,32 +64,31 @@ In this lab you will:
 
 4. Upload the public key to your OCI account
 
-    In order to use the CLI, you need to upload the public key generated to your user account.
+    Before you can use the OCI CLI, you must upload the public key to your user account.
 
     Get the key content with:
 
-    ```
+    ```bash
     <copy>
     cat ~/.oci/oci_api_key_public.pem
     </copy>
     ```
 
-    Or open the file with your prefered editor and copy the full printed output to clipboard.
+    Alternatively, you can open the file with your preferred editor and copy the full printed output to the clipboard.
 
-5. In the OCI web console:
+5. In the Oracle Cloud console, from navigation menu, select **Users** and then click **User Settings**, and then do the following:
 
-    - Under **User -> User Settings**.
     - Click **API Keys**.
     - Click **Add Public Key**.
     - Click **Paste Public Key**.
     - Paste the key copied above.
     - Click **Add**.
 
-    You can verify that the Fingerprint generated matches the fingerprint output of the config.
+    You can verify that the fingerprint generated matches the fingerprint output of the configuration.
 
-6. Test your CLI:
+6. Test the OCI CLI:
 
-    ```
+    ```bash
     <copy>
     oci os ns get
     </copy>
@@ -98,7 +96,7 @@ In this lab you will:
 
     This command should output the namespace of your tenancy (usually the name of the tenancy or a randomized string).
 
-    ```
+    ```json
     {
         "data": "your-tenancy-namespace"
     }
@@ -108,9 +106,9 @@ In this lab you will:
 
 ## **STEP 2:** Install `kubectl`
 
-1. *If you are using Docker Desktop on Mac OS X or Windows, `kubectl` should already be installed, and you can skip the install step.*
+**Note**: If you are using Docker Desktop on Mac OS X or Windows, `kubectl` should already be installed, and you can skip the install step.
 
-2. To install `kubectl` run:
+1. To install `kubectl` run:
 
     ```bash
     <copy>
@@ -129,12 +127,12 @@ In this lab you will:
     </copy>
     ```
 
-    Add the binary to your PATH
+    Add the binary to your PATH variable.
 
     For more detailed instructions, go to:
     [https://kubernetes.io/docs/tasks/tools/install-kubectl/](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
-3. Make sure you have a recent version >= 1.18 with:
+2. Use the following command to make sure you are using kubectl 1.18 or later:
 
     ```bash
     <copy>
@@ -155,7 +153,6 @@ In this lab you will:
     For more detailed instructions for your specific OS, go to:
     [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/).
 
-    
 ## **STEP 4:** Check OpenSSL
 
 1. Make sure you have OpenSSL installed with
@@ -166,12 +163,9 @@ In this lab you will:
     </copy>
     ```
 
-    See if the command is found or fails. 
+    See if the command is found or fails.
 
     It should be present by default on your machine.
-
-
-You may proceed to the next lab.
 
 ## Acknowledgements
 

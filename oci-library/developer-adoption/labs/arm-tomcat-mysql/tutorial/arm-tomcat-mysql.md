@@ -27,8 +27,11 @@ Oracle Linux 8 uses Podman to run and manage containers. Podman is a daemonless 
 
 1. Install the `container-tools` module that pulls in all the tools required to work with containers.
     ```
-    $<copy>sudo dnf module install container-tools:ol8</copy>
-    $<copy>sudo dnf install podman-docker git</copy>
+    <copy>sudo dnf module install container-tools:ol8</copy>
+    ```
+
+    ```
+    <copy>sudo dnf install podman-docker git</copy>
     ```
 
 <!-- 1. Set SELinux to be in permissive mode so that Podman can easily interact with the host.
@@ -67,7 +70,7 @@ The application uses the Tomcat servlet container and the MySQL database. Both T
 
 1. Create a pod using Podman.
     ```
-    $<copy>podman pod create --name todo-app -p 8080:8080</copy>
+    $<copy>podman pod create --name todo-app -p 8080:8080 --infra-image k8s.gcr.io/pause:3.1</copy>
     ```
 
 2. Start the database container in the pod.
@@ -89,11 +92,12 @@ The application uses the Tomcat servlet container and the MySQL database. Both T
 3. Deploy the application that you built as a WAR file with a Tomcat server.
    
    ```
-    $<copy>podman run --pod todo-app \</copy>
+    $<copy>podman run --pod todo-app -d \</copy>
     <copy>--name todo-tomcat \</copy>
     <copy>-v "${PWD}"/target/todo.war:/usr/local/tomcat/webapps/todo.war:z \</copy>
-   <copy> tomcat:9</copy>
-    ```
+    <copy> tomcat:9</copy>
+    $<copy>podman logs -f todo-tomcat</copy>
+   ```
 
     The database connect information and the application are provided to the Apache Tomcat container though the `src/main/resources/todo.properties`. The JDBC URL uses `localhost` as the MySQL server host. This is because containers within the same pod can communicate with each other using `localhost`. The application WAR file is provided as a mount to the container.
 

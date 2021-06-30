@@ -4,7 +4,7 @@
 
 In this lab, you will learn how to create a simple non-Highly-Available (non-HA) Cloudera Distribution Including Apache Hadoop (CDH) cluster using the Oracle Cloud Infrastructure Console (OCI) and Big Data Service (BDS). This will be a small testing cluster that is not intended to process huge amounts of data. It will be based on small Virtual Machine (VM) shapes that are perfect for developing applications and testing functionality at a minimal cost.
 
-Estimated Lab Time: 75 minutes
+Estimated Lab Time: 60 minutes
 
 ### Objectives
 
@@ -58,9 +58,10 @@ Create the cluster as follows:
 2. Log in to the **Oracle Cloud Console** as the Cloud Administrator that you used to create the resources in **Lab 1**, if you are not already logged in. On the **Sign In** page, select your `tenancy` if needed, enter your `username` and `password`, and then click **Sign In**. The **Oracle Cloud Console** Home page is displayed.
 </if>
 
-2. Click the **Navigation Menu** in the upper left, navigate to **Analytics & AI**, and then select **Big Data**.
+2. Click the **Navigation** menu and navigate to **Analytics & AI > Big Data Service**.
 
-![](./images/big-data.png " ")
+
+ ![](./images/big-data.png " ")
 
     <if type="livelabs">
 5. On the **Clusters** page, click **Create Cluster**.
@@ -313,4 +314,4 @@ This concludes this lab. You may now [proceed to the next lab](#next).
 * **Contributors:**  
     + Martin Gubar, Director, Oracle Big Data Product Management
     + Ben Gelernter, Principal User Assistance Developer, DB Development - Documentation
-* **Last Updated By/Date:** Lauran Serhal, March 2021
+* **Last Updated By/Date:** Lauran Serhal, May 2021

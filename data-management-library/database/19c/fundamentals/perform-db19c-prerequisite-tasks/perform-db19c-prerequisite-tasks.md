@@ -6,7 +6,7 @@ This lab shows you what you need to do to your compute instance before you can i
 Estimated Lab Time: 15 minutes
 
 ## Objectives
-In this lab, you learn how to do the following:
+Learn how to do the following:
 
 - Run oracle-database-preinstall-19c
 - Make the `oracle` user a sudoer
@@ -19,7 +19,10 @@ In this lab, you learn how to do the following:
 - Download the lab files to your compute instance
 - Configure the /etc/hosts file on your compute instance
 
-## Prerequisites
+### Prerequisites
+
+The following need to be completed before you start:
+
 - You created a compute instance.
 - You have your My Oracle Support username and password. These are required to download OPatch and a release update.
 

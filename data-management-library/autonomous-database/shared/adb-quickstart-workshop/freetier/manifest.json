@@ -8,14 +8,15 @@
         "filename": "./intro.md"
       },
       {
-        "title": "Getting Started",
+        "title": "Get Started",
         "description": "Get a Free Trial",
         "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/pre-register-free-tier-account.md"
       },
       {
           "title": "Lab 1: Provision Autonomous Database",
           "description": "Provision Autonomous Database",
-          "filename": "./../../adb-provision/adb-provision.md"
+          "type": "freetier",
+          "filename": "./../../adb-provision/adb-provision-conditional.md"
       },
       {
           "title": "Lab 2: Explore SQL Worksheet",
@@ -23,17 +24,18 @@
           "filename": "./../../adb-sqldevweb/adb-sqldevweb.md"
       },
       {
-          "title": "Lab 3: Loading Data",
+          "title": "Lab 3: Load Data",
           "description": "Load data into ADB",
-          "filename": "./../../adb-loading/adb-loading.md"
+          "type": "freetier",
+          "filename": "./../../adb-loading/adb-loading-conditional.md"
       },
       {
-          "title": "Lab 4: Querying External Data",
+          "title": "Lab 4: Query External Data",
           "description": "Query Data in External Files",
           "filename": "./../../adb-query/adb-query.md"
       },
       {
-          "title": "Lab 5: Visualizing Your Data",
+          "title": "Lab 5: Visualize Your Data",
           "description": "Visualizing Your Data",
           "filename": "./../../adw-visualizations/adw-visualizations.md"
       },

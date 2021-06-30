@@ -20,9 +20,9 @@ There is a recording of the instructor going through this lab here:
 
 A compartment is a collection of cloud assets, like compute instances, load balancers, databases, etc. By default, a root compartment was created for you when you created your tenancy (ie when you registered for the trial account). It is possible to create everything in the root compartment, but Oracle recommends that you create sub-compartments to help manage your resources more efficiently.
 
-1. From the menu, select **Identity** and **Compartments**. Click on the blue **Create Compartment** button to create a sub-compartment.
+1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**.
 
-   ![Create a compartment](images/img005.png)
+	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-compartment.png " ")
    ![Create a compartment](images/img009.png)
 
 2. Name the compartment **Demo** and provide a short description. Be sure your root compartment is shown as the parent compartment. Press the blue **Create Compartment** button when ready.
@@ -37,8 +37,9 @@ A user's permissions to access services comes from the _groups_ to which they be
 
 We'll create a user, a group, and a security policy to understand the concept.
 
-1. Sign in to the console, on the **Menu** click **Identity**, then select **Groups**.
-   ![Create a group](images/img0010.png)
+1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Groups**.
+
+	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-groups.png " ")
 
 2. Click **Create Group**.
    ![](images/img0011.png)
@@ -82,8 +83,9 @@ We'll create a user, a group, and a security policy to understand the concept.
 
 6. Create a New User
 
-   a) On the **Menu** click **Identity**, and then click **Users**.
-      ![](images/img0013.png)
+   a) Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Users**.
+
+	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-users.png " ")
 
    b) Click **Create User**.
 
@@ -158,8 +160,8 @@ We'll create a user, a group, and a security policy to understand the concept.
 
       a) Sign back in with the ***admin*** account.
       
-      b) On the Menu click Identity, and then click Users. From the **Users** list, click the user account that you just created (for example, `User01`)  to go to the User Details page.
-         ![](images/image019.png)
+      b) Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Users**. From the **Users** list, click the user account that you just created (for example, `User01`)  to go to the User Details page.
+         ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-users.png " ")
       
       c) Under the **Resources** menu on the left, click **Groups.** if its not already selected.
 
@@ -185,7 +187,7 @@ We'll create a user, a group, and a security policy to understand the concept.
 
       d) There is no message related to permissions and you are allowed to create new instances
 
-      e) Go to the **Menu**, click **Identity** and select **Groups.**
+      e) Go to the **Menu**, click **Identity & Security** and select **Groups.**
 
       f) The message **“Authorization failed or requested resource not found”** appears. This is expected, since your user has no permission to modify groups. (Note: You may instead get the "An unexpected error occurred" message instead. That is also fine.)
          ![](images/image021.png)
@@ -199,5 +201,5 @@ We'll create a user, a group, and a security policy to understand the concept.
 - **Author** - Rajeshwari Rai, Prasenjit Sarkar
 - **Adapted by** -  Tom McGinn, Database Product Management
 - **Contributors** - Arabella Yao, Product Manager Intern, DB Product Management
-- **Last Updated By/Date** - Rajeshwari Rai, January 2021
+- **Last Updated By/Date** - Orlando Gentil, June 2021
 

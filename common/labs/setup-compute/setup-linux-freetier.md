@@ -63,7 +63,7 @@ Now that your stack has been created, you will run an *apply* job to create the 
     ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/networking-vcn.png " ")
 8.  The VCN you created should be listed.  Click on the VCN you just created.
 ![Image alt text](images/db19c-freetier-step1-15.png " ")  
-9.  On the VCN homepage notice the 3 subnets that were created.  Each subnet is tied to an Availability Domain.  Click on the first subnet that matches AD-1.
+9.  On the VCN homepage notice the 3 subnets that were created.  Each subnet is tied to an Availability Domain.  Click on the subnet that matches AD-1.
 ![Image alt text](images/db19c-freetier-step1-16.png " ")  
 10.  Inspect the subnet homepage, find the OCID (Oracle Cloud ID).  Click **Copy**
 ![Image alt text](images/db19c-freetier-step1-17.png " ")  
@@ -195,4 +195,3 @@ You may now [proceed to the next lab](#next).
 - **Author** - Kay Malcolm, DB Product Management
 - **Contributors** - Jaden McElvey, Anoosha Pilli, Sanjay Narvekar, David Start, Arabella Yao
 - **Last Updated By/Date** - Anoosha Pilli, May 2021
-

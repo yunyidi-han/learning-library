@@ -11,12 +11,6 @@ Estimated Lab Time: 10 minutes
 -   Learn how to create external tables on top of files residing on the object store
 -   Learn how to query external data by the external tables
 
-### Prerequisites
-
-- The following lab requires an <a href="https://www.oracle.com/cloud/free/" target="\_blank">Oracle Cloud account</a>. You may use your own cloud account, a cloud account that you obtained through a trial, a LiveLabs account or a training account whose details were given to you by an Oracle instructor.
-- This lab assumes you have completed the **Prerequisites** and **Lab 1** seen in the Contents menu on the left.
-- Make sure you have completed the previous lab in the Contents menu on the left, *Loading Data*, before you proceed with this lab. In Loading Data, you created data files on the OCI Object Storage and you created the credential object, all of which you will use in this lab.
-
 ## **STEP 1**: Create External Tables with DBMS_CLOUD
 
 1.  If you are not already logged in to Oracle Cloud Console, log in and select Autonomous Data Warehouse from the hamburger menu and navigate into your ADW Finance Mart instance.
@@ -43,29 +37,17 @@ Estimated Lab Time: 10 minutes
 
 6.  The SQL Worksheet appears. Before you proceed with the SQL Worksheet, perform the next two steps.
 
-7.  Download <a href="./files/create_external_tables_without_base_url.txt" target="\_blank">this code snippet</a> to a text editor.
+7.  Download <a href="./files/create_external_tables_without_base_url_v2.txt" target="\_blank">this code snippet</a> to a text editor.
 
-8.  Replace `<file_uri_base>` in the code with the base URL you copied in Loading Data Lab, Step 6. You should make 9 substitutions.
+8.  Replace `<bucket URI>` in the code with the base URL you copied in Loading Data Lab, Step 6.
 
     This code uses the **create\_external\_table** procedure of the **DBMS\_CLOUD** package to create external tables on the files staged in your object store. Note that you are still using the same credential and URLs of files on OCI Object Storage you used when loading data in Loading Data Lab.
 
-    For each `<file_uri_list>` statement:
-
-    - Change `us-phoenix-1` to your real region name. The name is case-sensitive.
-    - Change `idthydc0kinr` to your real namespace. The name is case-sensitive.
-    - Change `ADWCLab` to your real bucket name. The name is case-sensitive.
-
-    ![Replace all the placeholders in the code snippet.](./images/step1.4.png " ")
-
 9.  Run the script in SQL Worksheet. In the Substitutions Variables dialog, paste the base URL you copied in Loading Data Lab, Step 6, and click **OK**.
 
-    ![Click Run Scipt. A dialog window opens up.](images/step1.5.png " ")
-
-    ![Enter the base URL and click Ok.](images/substitution-variables.png " ")
+    ![Click Run Script.](images/step1.5.png " ")
 
     Now you have **external tables** for the sample data pointing to files in the object store. Any query against the external tables will return the same result as against the original tables.
-
-    ![Click Run Script.](./images/run_script_create_ext_tables_without_base_url.png " ")
 
 ## **STEP 2**: Query External Data
 
@@ -85,4 +67,4 @@ For more information about querying external data, see the documentation [Queryi
 
 - **Author** - Nilay Panchal, ADB Product Management
 - **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-- **Last Updated By/Date** - Richard Green, March 2021
+- **Last Updated By/Date** - Tom McGinn, June 2021

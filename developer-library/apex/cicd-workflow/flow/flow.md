@@ -2,15 +2,13 @@
 
 ## Introduction
 
-In this lab we will create a snapshot of the app state in *`dev`* and deploy it to the production *`prd`* environment.
+We will create a snapshot of the app state in *`dev`* and deploy it to the production *`prd`* environment.
 
 We'll then make some changes, create a new snapshot and re-deploy the application to the production environment.
 
-Estimated Lab Time: 15 minutes.
+Estimated Completion Time: 15 minutes.
 
 ### Objectives
-
-In this lab you will:
 
 - Take a snapshot of the app state on *`dev`*, and deploy it to the *`prd`* environment.
 - Make changes on *`dev`*, take a new snapshot and redeploy to *`prd`*.
@@ -70,7 +68,7 @@ In this lab you will:
 1. With the app export and the schema changelog, we can reproduce the full application to another environment with:
 
     ```bash
-    make update ENV=<environment> ID=<original_app_id> NEWID=<new_app_id> 
+    make update ENV=<environment> ID=<original_app_id> NEWID=<new_app_id>
     ```
 
     Note that APEX APP IDs must be *unique* within a single database (regardless of SCHEMA or WORKSPACE), so if you created the `prd` environment in the same database as the `dev` environment, the *`new_app_id`* MUST be different from the *`original_app_id`*. We recommend using a fixed offset (like 1000)
@@ -85,24 +83,24 @@ In this lab you will:
 
 ## **STEP 3:** Check the Deployment
 
-1. Log in to the Oracle Autonomous Database for *`prd`*: 
+1. Log in to the Oracle Autonomous Database for *`prd`*:
 
   - Go to **Oracle Databases -> Autonomous Transaction Processing** in your compartment
   - Click the database for dev (*APEX_PRD* if you used the default names)
 
-    ![](./images/db-list-prd.png)
+    ![](./images/db-list-prd.png " ")
 
-  - Click **Tools** tab 
+  - Click **Tools** tab
 
-    ![](./images/atp-tools.png)
+    ![](./images/atp-tools.png " ")
 
   - Under **Oracle Application Express**, click **Open APEX**
 
-    ![](./images/open-apex.png)
+    ![](./images/open-apex.png " ")
 
   - Click **Workspace Sign-in**
 
-    ![](./images/ws_signin.png)
+    ![](./images/ws_signin.png " ")
 
   - Enter the credentials for the Workspace Admin user (`WS_ADMIN` if you used the default names) found in the *`prd.env`* file (`WORKSPACE_ADMIN` and `WORKSPACE_ADMIN_PWD`)
 
@@ -111,7 +109,7 @@ In this lab you will:
     - User: `WS_ADMIN`
     - Password: check in the `prd.env` file
 
-    ![](./images/signin.png)
+    ![](./images/signin.png " ")
 
 2. You should find your application and be able to run it.
 
@@ -125,7 +123,7 @@ In this lab you will:
 
     - Go to **SQL Workshop**.
 
-    ![](./images/sql-workshop.png)
+    ![](./images/sql-workshop.png " ")
 
     - Click **Object Browser**.
 
@@ -136,7 +134,7 @@ In this lab you will:
     - Enter a new column named **BOGUS** for example.
 
     - Click **NEXT**.
-    
+
     - On the next page click **FINISH**
 
     We've now added a column to a table.
@@ -149,15 +147,15 @@ In this lab you will:
 
     - Click the **Opportunities** page.
 
-        ![](./images/opp-tracker-pages.png)
+        ![](./images/opp-tracker-pages.png " ")
 
     - Click the **Opportunties** region.
 
-        ![](./images/opp-region.png)
+        ![](./images/opp-region.png " ")
 
     - Change the name of the header in the **Opportunities** region.
 
-        ![](./images/opp-change.png)
+        ![](./images/opp-change.png " ")
 
     - Click **Save**.
 
@@ -204,10 +202,8 @@ In this lab you will:
 2. On the **APEX_PRD** Database, check that the changes have propagated.
 
 
-You may proceed to the next lab.
 
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, Vanitha Subramanyam, March 2021
  - **Last Updated By/Date** - Emmanuel Leroy, Vanitha Subramanyam, March 2021
-

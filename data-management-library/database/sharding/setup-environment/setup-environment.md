@@ -22,7 +22,7 @@ Click on the link below to download the Resource Manager zip files you need to b
 
 
 
-## **Step 1:** Prepare the Shard Database
+## **STEP 1:** Prepare the Shard Database
 
 1. Login to the Oracle Cloud Console, open the hamburger menu in the left hand corner. Choose **Resource Manager > Stacks**. Choose the **Compartment** that you want to use, click the  **Create Stack** button. *Note: If you are in a workshop, double check your region to ensure you are on the assigned region.*
 
@@ -55,9 +55,9 @@ Click on the link below to download the Resource Manager zip files you need to b
 
     ![](./images/step1.7-stackcreated.png " ")
 
-## **Step 2:** Terraform Plan (OPTIONAL)
+## **STEP 2:** Terraform Plan (OPTIONAL)
 
-When using Resource Manager to deploy an environment, execute a terraform **Plan** to verify the configuration. This is an optional step in this lab.
+When using Resource Manager to deploy an environment, execute a terraform **Plan** to verify the configuration. This is an optional STEP in this lab.
 
 1.  [OPTIONAL] Click **Terraform Actions** -> **Plan** to validate your configuration. Click **Plan**. This takes about a minute, please be patient.
 
@@ -69,7 +69,7 @@ When using Resource Manager to deploy an environment, execute a terraform **Plan
 
     ![](./images/planjob1.png " ")
 
-## **Step 3:** Terraform Apply
+## **STEP 3:** Terraform Apply
 
 When using Resource Manager to deploy an environment, execute a terraform **Plan** and **Apply**. Let's do that now.
 
@@ -100,7 +100,7 @@ When using Resource Manager to deploy an environment, execute a terraform **Plan
 
     
 
-## **Step 4:** Connect to your Instance
+## **STEP 4:** Connect to your Instance
 
 ### MAC or Windows CYGWIN Emulator
 
@@ -110,7 +110,7 @@ When using Resource Manager to deploy an environment, execute a terraform **Plan
     ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
     ````
 
-2. After successfully logging in, proceed to Step 5.
+2. After successfully logging in, proceed to STEP 5.
 
     ```
     ssh -i labkey opc@xxx.xxx.xxx.xxx
@@ -146,7 +146,7 @@ When using Resource Manager to deploy an environment, execute a terraform **Plan
 
 8.  Click Open to begin your session with the instance.
 
-## **Step 5:** Verify the Database is Up
+## **STEP 5:** Verify the Database is Up
 
 1.  From your connected session of choice **tail** the `buildsingle.log`, This file has the configures log of the database.
 
@@ -189,9 +189,8 @@ When using Resource Manager to deploy an environment, execute a terraform **Plan
     sqlplus system/Ora_DB4U@localhost:1521/catapdb
     </copy>
     ````
-    
 
-![](./images/sqlplus_login_orclpdb.png " ")
+    ![](./images/sqlplus_login_orclpdb.png " ")
     
 6.  To leave `sqlplus` you need to use the exit command. Copy and paste the text below into your terminal to exit sqlplus.
 
@@ -211,14 +210,10 @@ When using Resource Manager to deploy an environment, execute a terraform **Plan
 
 You now have a fully functional Oracle Database 19c instance running on Oracle Cloud Compute. Check all the 4 instances and make sure they are ready.
 
-You may proceed to the next lab.
+You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
 * **Author** - Minqiao Wang, DB Product Management, Dec 2020
-* **Contributors** -  
-* **Last Updated By/Date** - Minqiao Wang, DB Product Management, Apr 2021
+* **Last Updated By/Date** - Minqiao Wang, Jun 2021
 * **Workshop Expiry Date** - 25 April 2022
-
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
 

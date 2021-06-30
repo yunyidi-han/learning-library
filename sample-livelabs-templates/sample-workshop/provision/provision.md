@@ -171,17 +171,17 @@ Marketplace
 
 	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/marketplace.png " ")
 
-Compartment
+Identity & Security - Compartments
 1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**.
 
 	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-compartment.png " ")
 
-Federation
+Identity & Security - Federation
 1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Federation**.
 
 	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-federation.png " ")
 
-Policies
+Identity & Security - Policies
 1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Policies**.
 
 	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-policies.png " ")
@@ -191,6 +191,15 @@ Identity & Security - Audit
 
 	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-audit.png " ")
 
+Identity & Security - Groups
+1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Groups**.
+
+	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-groups.png " ")
+
+Identity & Security - Users
+1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Users**.
+
+	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-users.png " ")
 
 ## **STEP 1**: title
 

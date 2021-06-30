@@ -24,8 +24,9 @@ The purpose of this lab is to give you an overview of the Object Service and an 
 
 ## **STEP 1**: Create Object Storage Bucket
 
-1. From the OCI Services menu, click **Object Storage**.
-  ![](images/OBJECT-STORAGE001.PNG " ")
+1. Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
+
+	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/storage-buckets.png " ")
 
 3. Click **Create Bucket**.
 

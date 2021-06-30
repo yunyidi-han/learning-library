@@ -11,8 +11,11 @@ Once the instance has been created with Oracle Linux 8.x, we can install the `co
 
 1. Install the `container-tools` module that pulls in all the tools required to work with containers.
     ```
-    sudo dnf module install container-tools:ol8
-    sudo dnf install git
+    <copy>sudo dnf module install container-tools:ol8</copy>
+    ```
+
+    ```
+    <copy>sudo dnf install git</copy>
     ```
 
 <!-- 1. Set SELinux to be in permissive mode so that Podman can easily interact with the host.
@@ -34,7 +37,7 @@ Pods are a great way to manage related containers, like when an application is m
 Create a Pod with the command below 
 
   ```
-  $ <copy>podman pod create --hostname nextcloud --name nextcloud --publish 8080:80</copy>
+  $ <copy>podman pod create --hostname nextcloud --name nextcloud --publish 8080:80 --infra-image k8s.gcr.io/pause:3.1</copy>
   ```
     
   1. `podman pod create` - creates a pod.
@@ -96,14 +99,14 @@ $ <copy>podman logs -f nextcloud-db</copy>
 
 Now you can deploy Nextcloud itself as another container in the same pod.  The parameters are similar to the previous command, and here you are passing in the database connectivity details about the database that Nextcloud should use. 
 
-> **Note**: Ensure that the values for the variables `MYSQL_DATABASE`, `MYSQL_USER` and `MYSQL_PASSWORD` are the same that you provided when you started the database. 
+> **Note**: Ensure that the values for the variables `MYSQL_DATABASE`, `MYSQL_USER` and `MYSQL_PASSWORD` are the same that you provided when you started the database. Ensure you update the values for `NEXTCLOUD_ADMIN_USER` and `NEXTCLOUD_ADMIN_PASSWORD` to your choice.
 
 ```
 $ <copy>podman run --detach --pod=nextcloud \</copy>
   <copy>--env MYSQL_HOST=127.0.0.1 \</copy>
   <copy>--env MYSQL_DATABASE=nextcloud \</copy>
   <copy>--env MYSQL_USER=nextcloud \</copy>
-  <copy>--env MYSQL_PASSWORD=DB_USER_PASSWORD \</copy>
+  <copy>--env MYSQL_PASSWORD=NEXTCLOUD_PASSWORD \</copy>
   <copy>--env NEXTCLOUD_ADMIN_USER=NC_ADMIN \</copy>
   <copy>--env NEXTCLOUD_ADMIN_PASSWORD=NC_PASSWORD \</copy>
   <copy>--env NEXTCLOUD_TRUSTED_DOMAINS=<your public IP> \</copy>
@@ -120,10 +123,10 @@ $ <copy>podman run --detach --pod=nextcloud \</copy>
  To see the startup logs you can use :
 
   ```
-  $<copy>podman logs -f nextcloud-db</copy>
+  $<copy>podman logs -f nextcloud-app</copy>
   ```
 
-Once the start up is complete, you can navigate to to `http://<your_public_ip>:8080` to reach your Nextcloud server. 
+Once the start up is complete, you can navigate to to `http://<your_public_ip>:8080` to reach your Nextcloud server. Use the values you provided for `NEXTCLOUD_ADMIN_USER` and `NEXTCLOUD_ADMIN_PASSWORD` to login.
 
 
 ## Next Steps

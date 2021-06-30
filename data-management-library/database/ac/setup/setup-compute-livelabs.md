@@ -73,7 +73,7 @@ Watch the video below for an overview of the Build a DB System lab
 
     ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/generate-ssh-key-cloud-shell/images/upload-key-select-3.png " ")
 
-5. Once finished run the command below to check to see if your ssh key was uploaded.  Move it into your .ssh directory
+5. Once finished run the command below to check to see if your ssh key was uploaded.  Move it into your .ssh directory and change the permissions on the file.
 
     ````
     <copy>
@@ -82,6 +82,7 @@ Watch the video below for an overview of the Build a DB System lab
     ````
     ````
     mv <<keyname>> .ssh
+    chmod 600 .ssh/<<keyname>>
     ls .ssh
     cd ~
     ````
@@ -185,4 +186,4 @@ There may be several reasons why you can't login to the instance.  Here are some
 
 * **Author** - Rene Fontcha, Master Principal Platform Specialist, NA Technology
 * **Contributors** - Kay Malcolm, Product Manager, Database Product Management
-* **Last Updated By/Date** - Kay Malcolm, October 2020
+* **Last Updated By/Date** - Tom McGinn, June 2021

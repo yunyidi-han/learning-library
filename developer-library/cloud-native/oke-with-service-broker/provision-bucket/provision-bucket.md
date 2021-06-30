@@ -2,18 +2,16 @@
 
 ## Introduction
 
-In this lab we will use the OCI Service Broker to manage the lifecyle of an Object Storage bucket, using Kubernetes.
+You will use the Oracle Cloud Infrastructure (OCI) Service Broker to manage the lifecycle of an Object Storage bucket, using Kubernetes.
 
-Note that the OCI Service Broker supports creating buckets and provides a Pre-Authorized Request (PAR) to PUT files in the bucket only. In order to read, or delete files, you'll need to use the SDK with proper user credentials.
+Note that the OCI Service Broker allows you to create a bucket and add files to the bucket via a pre-authorized request (PAR), which processes PUT requests only. In order to read, or delete files, you'll need to use the SDK with proper user credentials.
 
-Estimated Lab Time: 10 minutes.
+Estimated Time: 10 minutes.
 
 ### Objectives
 
-In this lab you will:
-
-- Configure an Object Storage Bucket instance and binding to deploy on kubernetes.
-- Use kubectl to deploy the instance and provision the bucket.
+- Configure an Object Storage Bucket instance and binding to deploy on Kubernetes.
+- Use `kubectl` to deploy the instance and provision the bucket.
 - See an example usage.
 - Tear down the bucket instance.
 
@@ -33,16 +31,16 @@ In this lab you will:
 
 2. How it works:
 
-    - The `create-bucket.yaml` defines a bucket instance to be created. 
+    - `create-bucket.yaml` defines a bucket instance to be created.
 
-    - The `pre-auth.yaml` creates a binding to retrieve a pre-authorization request providing access to the bucket without credentials.
+    - `pre-auth.yaml` creates a binding to retrieve a pre-authorization request providing access to the bucket without credentials.
 
     - OCI Service Broker will then create a secret named `test-bucket-binding` containing the pre-authorized request endpoint to access the bucket in read and write mode.
 
 
 ## **STEP 2:** Edit the Manifests
 
-1. Edit the file called `create-bucket.yaml` and replace the mention `CHANGE_COMPARTMENT_OCID_HERE` with the **compartment OCID** of the compartment where you deployed the OKE cluster, and the `CHANGE_NAMESPACE_HERE` with the name of the namespace of your OCI tenancy (not to confuse with the Kubernetes namespace).
+1. Edit `create-bucket.yaml` and replace `CHANGE_COMPARTMENT_OCID_HERE` with the **compartment OCID** of the compartment where you deployed the OKE cluster, and replace `CHANGE_NAMESPACE_HERE` with the name of the namespace of your OCI tenancy (not to be confused with the Kubernetes namespace).
 
      You can find this information with the CLI using the command:
 
@@ -61,14 +59,13 @@ In this lab you will:
     ```
 
 
-    ***Note: the bucket name needs to be unique across the OCI compartment, even if you deploy on different Kubernetes namespaces.***
+    > **Note:** The bucket name needs to be unique across the OCI compartment, even if you deploy on different Kubernetes namespaces.
 
     If you're running this as part of a workshop with multiple users, make sure you modify the name of the bucket to make it unique by replacing the name `testbucket` with your unique name both in the `create-bucket.yaml` and `pre-auth.yaml` files.
 
-
 ## **STEP 3:** Deploy
 
-1. To deploy the mainfest use:
+1. To deploy the mainfest, use:
 
     ```bash
     <copy>
@@ -88,7 +85,7 @@ In this lab you will:
     </copy>
     ```
 
-    Should list:
+    This should list the following:
 
     ```
     NAME                                               CLASS                                      PLAN       STATUS   AGE
@@ -99,7 +96,7 @@ In this lab you will:
     ```
 
 
-2. Verify that the `test-bucket-binding` secret was created in the namespace `default` with:
+2. Verify that the `test-bucket-binding` secret was created in the namespace `default`:
 
     ```bash
     <copy>
@@ -107,9 +104,9 @@ In this lab you will:
     </copy>
     ```
 
-    Should list `test-bucket-binding`.
+    This command should list `test-bucket-binding`.
 
-3. You can also check in the OCI console under **Core -> Object Storage** in the compartment where you provisioned and you should see the bucket named `testbucket` (or the unique name you gave it).
+    You can also check in the Oracle Cloud Console Console by selecting **Core**, and then selecting **Object Storage** in the compartment where you provisioned. You should see the bucket named `testbucket` (or the unique name you gave it).
 
 ## **STEP 5:** Look at the Content of the Secret
 
@@ -190,7 +187,7 @@ In this lab you will:
     ```
 
     Note that this is the endpoint without the region namespace. You will need to prefix it with the regional endpoint to reach the bucket, for example:
-    
+
     ```
     https://objectstorage.us-ashburn-1.oraclecloud.com/
     ```
@@ -243,7 +240,7 @@ In this lab you will:
     </copy>
     ```
 
-3. Create a new file `object-storage-demo-app.yaml` and paste the content above.
+3. Create a new file, named `object-storage-demo-app.yaml`, and paste the content above into the file.
 
 4. Deploy the manifest with:
 
@@ -263,19 +260,19 @@ In this lab you will:
 
     Get the `object-storage-demo` pod name then:
 
-    ```bash
-    kubectl exec -it <pod_name> -n default -- /bin/bash
-    ```
+      ```bash
+      kubectl exec -it <pod_name> -n default -- /bin/bash
+      ```
 
     At the shell prompt inside the container, check the environment variables with:
 
-    ```bash
-    <copy>
-    env | grep BUCKET
-    </copy>
-    ```
+      ```bash
+      <copy>
+      env | grep BUCKET
+      </copy>
+      ```
 
-    Which should return something like:
+    It should return something like:
 
     ```bash
     BUCKET_URI=https://objectstorage.us-ashburn-1.oraclecloud.com/p/quh0hScm9kImDHgDVIevxGygO6NuecgYreT9t1yu1yF2kHUsKXs6GoC2Zs2hu-NS/n/your_tenancy_namespace/b/testbucket/o/
@@ -293,17 +290,15 @@ In this lab you will:
     </copy>
     ```
 
-7. In the OCI console, check that the object was created in the bucket.
+7. In the Oracle Cloud Console, check that the object was created in the bucket.
 
 ## **STEP 7:** Clean Up
 
-1. Delete the content of the bucket
+1. Delete the content of the bucket.
 
-    ***buckets must be empty before attempting to delete them, so clean up the bucket first***.
+    > **Note:** Buckets must be empty before attempting to delete them.
 
-    If you fail to clean up the bucket, the attempt to deprovision the bucket will fail.
-
-    However, the pre-authorized request giving access to the bucket to write does not allow listing or deleting objects, and this needs to be done with the CLI or through the OCI console.
+    If you fail to clean up the bucket, the attempt to deprovision the bucket will fail. Note, however, that the pre-authorized request, which gives you write access to the bucket, does not allow listing or deleting objects, so this needs to be done with the CLI or through the OCI console.
 
 2. To undeploy, and delete the storage bucket instance, delete the Kubernetes instances.
 
@@ -312,9 +307,6 @@ In this lab you will:
     kubectl delete -f ./object_storage
     </copy>
     ```
-
-
-You may proceed to the next lab.
 
 ## Acknowledgements
 

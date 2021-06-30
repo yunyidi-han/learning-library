@@ -4,6 +4,7 @@
 
 This lab walks you through the steps on how you can use the Oracle Analytics Cloud to visualize entities from a database such as the results of the model created in OML.
 
+Estimated Lab Time: 20 minutes
 
 *In addition to the workshop*, feel free to watch the walkthrough companion video:
 [](youtube:wlSVlFv1R2A)
@@ -13,9 +14,9 @@ This lab walks you through the steps on how you can use the Oracle Analytics Clo
 -   Learn how to visualize entities from a database in Oracle Analytics Cloud such as an Oracle Machine Learning generated model.
 
 
-### Required Artifacts
+### Prerequisites
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
--   The estimated time to complete this lab is 10 minutes.
+
 
 ### Extra Resources
 -   To learn more about Oracle Analytics Cloud (OAC), feel free to explore the capabilities by clicking on this link: [OAC Overview](https://www.oracle.com/business-analytics/analytics-cloud.html)
@@ -124,9 +125,9 @@ This lab walks you through the steps on how you can use the Oracle Analytics Clo
 
 -   The following are some other examples of what kinds of visualizations can be done in Oracle Analytics Cloud.  In the second screen capture, you can see how the machine learning data you created in this lab can be used to make prediction visualizations to give insight into future sales.
 
-![](./images/9.png " ")
+    ![](./images/9.png " ")
 
-![](./images/10.png " ")
+    ![](./images/10.png " ")
 
 
 ## Summary
@@ -135,14 +136,14 @@ This lab walks you through the steps on how you can use the Oracle Analytics Clo
 
 -   **Congratulations, you have completed the main sections of this workshop!**
 
--   To recap, throughout this workshop, you experienced a wide breadth of the Oracle Cloud Data Plaform and its extensive capabilities! You provisioned and leveraged Oracle Cloud services such as Autonomous Data Warehouse (ADW), Application Express (APEX), Oracle Machine Learning (OML), SQL Developer Web, Oracle Analytics Cloud (OAC), Oracle Rest Data Services (ORDS), and, in the bonus labs, Oracle Digital Assistant (ODA). In this process, you journeyed to the Cloud to build a full fledged solution. You have a database for your needs, an app that interfaces with actionable analytic insights and machine learning models, and a chatbot that you can easily interact with using natural speech. Congratulations!
+-   To recap, throughout this workshop, you experienced a wide breadth of the Oracle Cloud Data Platform and its extensive capabilities! You provisioned and leveraged Oracle Cloud services such as Autonomous Data Warehouse (ADW), Application Express (APEX), Oracle Machine Learning (OML), SQL Developer Web, Oracle Analytics Cloud (OAC), Oracle Rest Data Services (ORDS), and, in the bonus labs, Oracle Digital Assistant (ODA). In this process, you journeyed to the Cloud to build a full fledged solution. You have a database for your needs, an app that interfaces with actionable analytic insights and machine learning models, and a chatbot that you can easily interact with using natural speech. Congratulations!
 
--   **Feel free to explore the bonus labs!** You will build an Oracle Digital Assitant (ODA) chatbot.
+-   **Feel free to explore the bonus labs!** You will build an Oracle Digital Assistant (ODA) chatbot.
 
 ## Acknowledgements
 
 - **Author** - NATD Cloud Engineering - Austin Hub (Khader Mohiuddin, Jess Rein, Philip Pavlov, Naresh Sanodariya, Parshwa Shah)
-- **Contributors** - Kamryn Vinson, QA Specialist, Arabella Yao, Product Manager Intern, DB Product Management
-- **Last Updated By/Date** - Jeffrey Malcolm, QA Specialist, July 2020
+- **Contributors** - Arabella Yao, Product Manager Intern, DB Product Management
+- **Last Updated By/Date** - Kamryn Vinson, June 2021
 
 

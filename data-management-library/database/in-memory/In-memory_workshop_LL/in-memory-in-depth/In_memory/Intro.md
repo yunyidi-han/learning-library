@@ -6,11 +6,10 @@ Oracle Database In-Memory adds in-memory functionality to Oracle Database for tr
 
  Oracle Database In-Memory accelerates both Data Warehouses and mixed workload OLTP databases and is easily deployed under any existing application that is compatible with Oracle Database. No application changes are required. Database In-Memory uses Oracle’s mature scale-up, scale-out, and storage-tiering technologies to cost effectively run any size workload. Oracle’s industry leading availability and security features all work transparently with Oracle Database In-Memory, making it the most robust offering on the market.
 
-
+![](images/IMFeatures.png)
+The innovation in In-Memory features has been continous and has made it more automated over time.
 
 ## **Dual-Format Database**
-
-
 
 **Row Format vs. Column Format**
 

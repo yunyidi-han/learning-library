@@ -13,11 +13,11 @@
     },
     {
       "title": "Create an OCI Arm A1 instance",
-      "filename": "../../../../common/create-a1-instance-ol8/create-a1-instance.md"
+      "filename": "../../../common/create-a1-instance-ol8/create-a1-instance.md"
     },
     {
       "title": "Expose application ports to users",
-      "filename": "../../../../common/allow-traffic-8080/allow-traffic.md"
+      "filename": "../../../common/allow-traffic-8080/allow-traffic.md"
     },
     {
       "title": "Running Java web applications on Ampere A1 Compute",

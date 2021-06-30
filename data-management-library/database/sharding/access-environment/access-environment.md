@@ -31,7 +31,7 @@ This lab assumes you have already completed the following:
 
 
 
-## **Step 1:** Connect to your Instances
+## **STEP 1:** Connect to your Instances
 
 ### MAC or Windows CYGWIN Emulator
 
@@ -41,7 +41,7 @@ This lab assumes you have already completed the following:
     ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
     ````
 
-2. After successfully logging in, proceed to Step 5.
+2. After successfully logging in, proceed to STEP 5.
 
     ```
     ssh -i labkey opc@xxx.xxx.xxx.xxx
@@ -77,7 +77,7 @@ This lab assumes you have already completed the following:
 
 8.  Click Open to begin your session with the instance.
 
-## **Step 2:** Verify the Database is Up
+## **STEP 2:** Verify the Database is Up
 
 1.  From your connected session of choice **tail** the `buildsingle.log`, This file has the configures log of the database.
 
@@ -118,49 +118,49 @@ This lab assumes you have already completed the following:
 
     - Connect to the catalog database.
 
-       ```
-       <copy>
-       sudo su - oracle
-       sqlplus system/Ora_DB4U@localhost:1521/catapdb
-       </copy>
-       ```
+        ```
+        <copy>
+        sudo su - oracle
+        sqlplus system/Ora_DB4U@localhost:1521/catapdb
+        </copy>
+        ```
 
        
 
     - Connect to the shard1 database.
 
-       ```
-       <copy>
-       sudo su - oracle
-       sqlplus system/Ora_DB4U@localhost:1521/shdpdb1
-       </copy>
-       ```
+        ```
+        <copy>
+        sudo su - oracle
+        sqlplus system/Ora_DB4U@localhost:1521/shdpdb1
+        </copy>
+        ```
 
        
 
     - Connect to the shard 2 database.
 
-       ```
-       <copy>
-       sudo su - oracle
-       sqlplus system/Ora_DB4U@localhost:1521/shdpdb2
-       </copy>
-       ```
+        ```
+        <copy>
+        sudo su - oracle
+        sqlplus system/Ora_DB4U@localhost:1521/shdpdb2
+        </copy>
+        ```
 
        
 
     - Connect to the shard3 database.
 
-       ```
-       <copy>
-       sudo su - oracle
-       sqlplus system/Ora_DB4U@localhost:1521/shdpdb3
-       </copy>
-       ```
+        ```
+        <copy>
+        sudo su - oracle
+        sqlplus system/Ora_DB4U@localhost:1521/shdpdb3
+        </copy>
+        ```
 
        
 
-![](./images/sqlplus_login_orclpdb.png " ")
+    ![](./images/sqlplus_login_orclpdb.png " ")
     
 6.  To leave `sqlplus` you need to use the exit command. Copy and paste the text below into your terminal to exit sqlplus.
 
@@ -180,14 +180,9 @@ This lab assumes you have already completed the following:
 
 You now have 4 Oracle Database 19c instances running on Oracle Cloud Compute VMs. 
 
-You may proceed to the next lab.
+You may now [proceed to the next lab](#next).
 
 ## Acknowledgements
-* **Author** - Minqiao Wang, DB Product Management, Dec 2020
-* **Contributors** -  
-* **Last Updated By/Date** - Minqiao Wang, DB Product Management, Apr 2021
-* **Workshop Expiry Date** - 
-
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+* **Author** - Minqiao Wang, DB Product Management 
+* **Last Updated By/Date** - Minqiao Wang, Jun 2021
 

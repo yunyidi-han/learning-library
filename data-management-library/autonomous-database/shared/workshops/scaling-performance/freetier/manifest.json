@@ -8,17 +8,18 @@
             "filename": "./../../../intro/intro-ziplab.md"
         },
         {
-            "title": "Getting Started",
+            "title": "Get Started",
             "description": "Get a Free Trial",
             "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
             "title": "Lab 1: Provision Autonomous Database",
             "description": "Provision a new ADW instance and connect to the database",
-            "filename": "./../../../adb-provision/adb-provision.md"
+            "type": "freetier",
+            "filename": "./../../../adb-provision/adb-provision-conditional.md"
         },
         {
-            "title": "Lab 2: Scaling and Performance",
+            "title": "Lab 2: Scale for Performance",
             "description": "Scaling and Performance in Your Autonomous Database",
             "filename": "./../../../adw-scaling-performance/adw-scaling-performance.md"
         },

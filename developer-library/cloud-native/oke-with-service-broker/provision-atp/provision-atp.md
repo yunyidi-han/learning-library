@@ -1,22 +1,20 @@
-# Provision an Oracle Autonomous Transaction Processing (ATP) Database with Kubernetes
+# Provision an Oracle Autonomous Transaction Processing database with Kubernetes
 
 ## Introduction
 
-In this lab we will use the OCI Service Broker to manage the lifecyle of an Oracle Autonomous Transaction Processing (ATP) database, using Kubernetes.
+You will use the Oracle Cloud Infrastructure (OCI) Service Broker to manage the lifecycle of an Oracle Autonomous Transaction Processing database, using Kubernetes.
 
-Estimated Lab Time: 10 minutes.
+Estimated Time: 10 minutes.
 
 ### Objectives
 
-In this lab you will:
-
-- Configure an ATP instance and binding to deploy on kubernetes.
+- Configure an Autonomous Transaction Processing instance and binding to deploy on kubernetes.
 - Use kubectl to deploy the instance and provision the database.
-- Learn how to tear down the ATP database instance when you are done.
+- Learn how to tear down the Autonomous Transaction Processing database instance when you are done.
 
-Note: OCI Service Broker provisions an ATP database with a public endpoint. It is currently not possible to provision the database in a private subnet via OCI Service Broker.
+Note: OCI Service Broker provisions an Autonomous Transaction Processing database with a public endpoint. It is currently not possible to provision the database in a private subnet via OCI Service Broker.
 
-## **STEP 1:** Get the Template Manifests for ATP
+## **STEP 1:** Get the Template Manifests for Autonomous Transaction Processing
 
 1. Download the example templates:
 
@@ -35,28 +33,28 @@ Note: OCI Service Broker provisions an ATP database with a public endpoint. It i
 
 2. How it works:
 
-    - The `atp-demo-secret.yaml` defines a secret with the admin password and wallet password as-is. Secrets are base64 encoded. 
+    - `atp-demo-secret.yaml` file defines a secret with the admin password and wallet password as-is. Secrets are base64 encoded.
 
-    - The `atp-secret.yaml` defines a secret with the same information as the atp-demo-secret but the variables are defined as JSON objects. The admin password is used to provision the instance, while the wallet password is used for the binding.
+    - `atp-secret.yaml` defines a secret with the same information as `atp-demo-secret.yml`, but the variables are defined as JSON objects. The admin password is used to provision the instance, while the wallet password is used for the binding.
 
-    - The `atp-instance.yaml` define an instance of the ATP service to deploy. It defines the specifications for this instance, including OCPUs, autoscaling mode and storage parameters.
+    - `atp-instance.yaml` define an instance of the Autonomous Transaction Processing service to deploy. It defines the specifications for this instance, including OCPUs, autoscaling mode and storage parameters.
 
-    - The `atp-binding.yaml` creates a binding and will generate the wallet secret to use by the app.
+    - `atp-binding.yaml` creates a binding and will generate the wallet secret to use by the app.
 
-    - The `atp-demo.yaml` contains the deployment of a demo app, showing how to load the wallet in the app using the init container.
+    - `atp-demo.yaml` contains the deployment of a demo app, showing how to load the wallet in the app using the init container.
 
         Note that the init container is currently needed to decode the credentials that are base64 encoded twice (see the GitHub repo for OCI Service Broker for more details about this topic).
 
-    - A secret called `atp-demo-binding` is created by the OCI Service Broker when deploying, which provides the wallet credentials for the ATP database.
+    - A secret called `atp-demo-binding` is created by the OCI Service Broker when deploying, which provides the wallet credentials for the Autonomous Transaction Processing database.
 
-        This secret contains the content of the wallet to access the ATP database.
+        This secret contains the content of the wallet to access the Autonomous Transaction Processing database.
 
 ## **STEP 2:** Edit the Manifests
 
-1. Edit the file called `atp-instance.yaml` and replace the mention `CHANGE_COMPARTMENT_OCID_HERE` with the **compartment OCID** of the compartment where you deployed the OKE cluster.
+1. Edit `atp-instance.yaml` and replace `CHANGE_COMPARTMENT_OCID_HERE` with the **compartment OCID** of the compartment where you deployed the OKE cluster.
 
+2. Edit `atp-demo.yaml` and replace `<USER_APPLICATION_IMAGE>` with `nginx` and replace the `apiVersion` to be `apps/v1`.
 
-2. Edit the file called `atp-demo.yaml` and replace the `<USER_APPLICATION_IMAGE>` with `nginx` and replace the `apiVersion` to be `apps/v1`.
 
 ## **STEP 3:** Deploy
 
@@ -80,7 +78,7 @@ Note: OCI Service Broker provisions an ATP database with a public endpoint. It i
     </copy>
     ```
 
-    Should list the following manifests:
+    This should list the following manifests:
 
     ```
     NAME                            READY   STATUS     RESTARTS   AGE
@@ -98,9 +96,9 @@ Note: OCI Service Broker provisions an ATP database with a public endpoint. It i
     serviceinstance.servicecatalog.k8s.io/osb-atp-demo-1   ClusterServiceClass/atp-service   standard   Ready    9m43s
     ```
 
-3. You can check the ATP database is being provisioned.
+3. Check to be sure the Autonomous Transaction Processing database is being provisioned.
 
-    In the OCI console under **Oracle Databases -> Autonmous Transaction Processing** in the compartment where you provisioned, you should see the ATP database named `osbdemo`.
+    In the Oracle Cloud Console, select **Oracle Databases**, and then select **Autonomous Transaction Processing** in the compartment where you provisioned the database. You should see the Autonomous Transaction Processing database named `osbdemo`.
 
     Wait until it is provisioned and **Available**, which is when the OCI Service Broker is able to create the `atp-demo-binding` secret containing the access wallet.
 
@@ -114,7 +112,7 @@ Note: OCI Service Broker provisions an ATP database with a public endpoint. It i
 
     Should show `atp-demo-binding`.
 
-    If it does not show, it is likely that the database is not fully provisioned yet. Check in the console and be patient.
+    If it does not show, then it is likely that the database is not fully provisioned yet. Check in the console and be patient.
 
 
 ## **STEP 5:** Check the Wallet Content in the Demo App
@@ -127,13 +125,13 @@ You can verify the wallet is now accessible inside the demo app container by loo
 
     ```bash
     <copy>
-    kubectl get pods 
+    kubectl get pods
     </copy>
     ```
 
     You should find a pod called `atp-demo-XXXXXXXXXX`.
 
-    Make sure the status is READY 1/1 or wait until it becomes ready; since the secret was not available for some time (until the database was available) the demo app would be unable to load the secret to decode the wallet. Once the secret is available, the pod will initialize.
+    Make sure the status is `READY 1/1` or wait until it becomes ready; since the secret was not available for some time (until the database was available) the demo app would be unable to load the secret to decode the wallet. Once the secret is available, the pod will initialize.
 
     Once the pod is ready, copy the name of the pod and execute:
 
@@ -154,11 +152,11 @@ You can verify the wallet is now accessible inside the demo app container by loo
     </copy>
     ```
 
-    Now you know how to get the credentials for a dynamically provisioned ATP database, you can build your own app connecting to the database.
+    Now you know how to get the credentials for a dynamically provisioned Autonomous Transaction Processing database, and you can build your own app connecting to the database.
 
 ## **STEP 5:** Clean Up
 
-1. To undeploy, and terminate the ATP instance, delete the Kubernetes instances with:
+1. To undeploy, and terminate the Autonomous Transaction Processing instance, delete the Kubernetes instances with:
 
     ```bash
     <copy>
@@ -166,10 +164,7 @@ You can verify the wallet is now accessible inside the demo app container by loo
     </copy>
     ```
 
-    Clean up is done asynchronously, and the ATP database will be de-provisioned after a few minutes.
-
-    
-You may proceed to the next lab.
+    Clean up is done asynchronously, and the Autonomous Transaction Processing database will be de-provisioned after a few minutes.
 
 ## Acknowledgements
 

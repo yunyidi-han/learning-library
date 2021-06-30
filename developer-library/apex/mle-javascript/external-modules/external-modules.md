@@ -112,7 +112,7 @@ Estimated Lab Time: 20 minutes
 
     ```
     <copy>
-    alter table project_tasks add email varchar(255);
+    alter table project_tasks add (email varchar(255), url varchar2(255), project_details varchar2(4000));
     </copy>
     ```
 

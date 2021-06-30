@@ -4,6 +4,8 @@
 
 In this lab, you will learn how to navigate to an Oracle Digital Assistant instance and design a Skill in which you will implement your APIs from the APEX portion of this workshop.  These APIs will be utilized in order to make REST calls to the Autonomous Data Warehouse to get information on store predictions.  These REST API calls will be tested through interacting with the chatbot dialogue.
 
+Estimated Lab Time: 20 minutes
+
 
 *In addition to the workshop*, feel free to watch the walkthrough companion video:
 [](youtube:I5prg0Ucso4)
@@ -16,10 +18,9 @@ In this lab, you will learn how to navigate to an Oracle Digital Assistant insta
 -   Learn how to implement REST APIs through Digital Assistant
 -   Learn how to test Digital Assistant Dialogue
 
-### Required Artifacts
+### Prerequisites
 
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
--   The estimated time to complete this lab is 20 minutes.
 
 ### Extra Resources
 -   To learn more about Oracle Digital Assistant (ODA), feel free to watch the following video: [](youtube:byXa6tIgyKY)
@@ -146,7 +147,7 @@ In this lab, you will learn how to navigate to an Oracle Digital Assistant insta
 ## Acknowledgements
 
 - **Author** - NATD Cloud Engineering - Austin Hub (Khader Mohiuddin, Jess Rein, Philip Pavlov, Naresh Sanodariya, Parshwa Shah)
-- **Contributors** - Jeffrey Malcolm, QA Specialist, Kamryn Vinson, QA Specialist
-- **Last Updated By/Date** - Jess Rein, August 2020
+- **Contributors** - Jeffrey Malcolm, QA Specialist
+- **Last Updated By/Date** - Kamryn Vinson, June 2021
 
 

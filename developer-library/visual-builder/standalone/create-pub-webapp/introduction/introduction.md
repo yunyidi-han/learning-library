@@ -7,7 +7,7 @@ This workshop shows you how to develop a web application in Visual Builder that 
 Estimated Workshop Time: 115 minutes
 
 ### What Is Oracle Visual Builder?
-Oracle Visual Builder provides easy access to data from any REST-based service, and lets you create reusable business objects for storing and managing data. Using the cloud-based visual development tools, you can create and test responsive web applications and native mobile apps without having to install any additional software. The visual designer enables you to quickly lay out pages in your applications by dragging and dropping UI components, customizing their attributes and defining their behavior.  
+Oracle Visual Builder provides easy access to data from any REST-based service, and lets you create reusable business objects for storing and managing data. Using the cloud-based visual development tools, you can create and test responsive web applications and native mobile apps without having to install any additional software. The visual designer enables you to quickly lay out pages in your applications by dragging and dropping UI components, customizing their attributes, and defining their behavior.  
 
 Take a look at this video to learn more, or just dive right into the labs.
 
@@ -15,7 +15,7 @@ Take a look at this video to learn more, or just dive right into the labs.
 
 ### What Will You Learn?
 
-In this workshop, you'll learn how to create a new application, add some pages, and link them to each other. You'll also create some business objects and learn how to import data and build pages for editing the data, as well as how to create common business rules for your web app.
+In this workshop, you'll learn how to create a new application, add some pages, and link them to each other. You'll also create some business objects and learn how to import data and build pages for editing the data.
 
 ### What Do You Need?
 
@@ -24,4 +24,4 @@ In this workshop, you'll learn how to create a new application, add some pages, 
 
 ## Acknowledgements
 * **Author** Sheryl Manoharan, Visual Builder User Assistance
-* **Last Updated By** - Sheryl Manoharan, December 2020
+* **Last Updated By** - Sheryl Manoharan, June 2021

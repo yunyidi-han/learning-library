@@ -1,30 +1,31 @@
 {
     "workshoptitle": "Querying Data in the Autonomous Database",
     "help": "livelabs-help-db_us@oracle.com",
-	"tutorials": [      
+	"tutorials": [
         {
             "title": "Introduction",
             "description": "Introduction",
             "filename": "./../../../intro/intro-ziplab.md"
         },
         {
-            "title": "Getting Started",
+            "title": "Get Started",
             "description": "Get a Free Trial",
             "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
             "title": "Lab 1: Provision an ADW Instance",
             "description": "Provision a new ADW instance and connect to the database",
-            "filename": "./../../../adb-provision/adb-provision.md"
+            "type": "freetier",
+            "filename": "./../../../adb-provision/adb-provision-conditional.md"
         },
         {
-            "title": "Lab 2: Loading Data",
+            "title": "Lab 2: Load Data",
             "description": "Provision a new ADW instance and connect to the database",
-            "filename": "./../../../adb-loading/adb-loading.md"
-        }
-        ,
+            "type": "freetier",
+            "filename": "./../../../adb-loading/adb-loading-conditional.md"
+        },
         {
-            "title": "Lab 3: ADB Query",
+            "title": "Lab 3: Query External Data",
             "description": "Provision a new ADW instance and connect to the database",
             "filename": "./../../../adb-query/adb-query.md"
         },

@@ -1,0 +1,35 @@
+{
+  "workshoptitle": "Expanding Oracle REST Data Services into Oracle Cloud Infrastructure",
+    "help": "livelabs-help-db_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Expanding Oracle REST Data Services into Oracle Cloud Infrastructure",
+            "filename": "../../intro/intro.md"
+        },
+        {
+            "title": "Login to Oracle Cloud",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login-livelabs.md"
+        },
+        {
+            "title": "Lab 1: Setups",
+            "description": "Setup your OCI account and create an Oracle Autonomous Database",
+            "filename": "../../setups/setups.md"
+        },
+        {
+            "title": "Lab 2: Create a Function to batchload data into the database using ORDS",
+            "description": "Connect to an Autonomous Database with SQL Developer Web",
+            "filename": "../../csv-function/csv-function.md"
+        },
+        {
+            "title": "Lab 3: Create a Function and Service Connector to load logs from the Logging Service into the database using ORDS",
+            "description": "Modern App Dev with Oracle REST Data Services",
+            "filename": "../../json-logging/json-logging.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}  

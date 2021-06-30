@@ -21,7 +21,9 @@ Oracle Cloud Infrastructure  offers both Bare Metal and Virtual Machine instance
 
 An Oracle Cloud Infrastructure VM compute instance runs on the same hardware as a Bare Metal instance, leveraging the same cloud-optimized hardware, firmware, software stack, and networking infrastructure.
 
-1. Navigate to the **Compute** tab and select **Instances**.
+1. Click the **Navigation Menu** in the upper left, navigate to **Compute**, and select **Instances**.
+
+	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/compute-instances.png " ")
 
 <if type="livelabs">
 2. Select the Compartment that you were assigned when the reservation was created.

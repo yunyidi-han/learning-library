@@ -11,25 +11,27 @@ Estimates Lab Time - 20 minutes
 * Clone the setup and microservices code
 * Execute setup
 
-### Prerequisites
-
-LiveLabs workshop reservation for this workshop and have launched the console for that reservation.  
-
 ## **STEP 1**: Select Your Compartment
 
 You have been assigned your own OCI compartment for running this workshop.  The name of the compartment is shown on the Launch page.
 
-1. Copy the compartment name (not OCID) from the workshop reservation page
+1. Copy the compartment name (not OCID) from the workshop reservation page.
 
 ![](images/copy-comp-name.png " ")
 
-2. Select the hamburger menu from the top left corner of the OCI Console and navigate to the Compute --> Compute --> Instances page
+2. Select the hamburger menu from the top left corner of the OCI Console and navigate to the Compute --> Compute --> Instances page.
 
 ![](images/select-compute-instances.png " ")
 
-3. Paste the compartment name in the "Compartment" field under "List Scope"
+3. Search for compartment using the compartment name from step#1 in the "Compartment" field under "List Scope". 
 
 ![](images/enter-comp-name.png " ")
+
+4. Select your compartment name from the drop down list.
+
+![](images/select-comp-name.png " ")
+
+![](images/correct-comp-name.png " ")
 
 ## **STEP 2**: Launch the Cloud Shell
 
@@ -45,11 +47,11 @@ Click the Cloud Shell icon in the top-right corner of the Console.
 1. To work with the application code, you need to make a clone from the GitHub repository using the following command.  
 
     ```
-    <copy>git clone -b 1.4 --single-branch https://github.com/oracle/microservices-datadriven.git
+    <copy>git clone -b 21.6.1 --single-branch https://github.com/oracle/microservices-datadriven.git
     </copy>
     ```
 
-   You should now see the directory `microservices-datadriven` in the directory that you created.
+   You should now see the directory `microservices-datadriven` in the current directory.
 
 2. Run the following command to edit your .bashrc file so that you will be returned to the workshop directory when you connect to the cloud shell in the future.
 
@@ -85,17 +87,17 @@ Click the Cloud Shell icon in the top-right corner of the Console.
 
   ![](images/get-compartment-ocid.png " ")
 
-4. The setup will ask you to enter an Auth Token so that docker can login to the OCI Registry. Please follow these steps to create an Auth Token
+4. The setup will ask you to enter an Auth Token so that docker can login to the OCI Registry. Please follow these steps to create an Auth Token.
 
   a. Locate your menu bar and click on the person icon at the far upper right. From the drop-down menu, select your user's name.
 
    ![](images/get-gbuser-ocid.png " ")
 
-  b. On the left side of the page, click Auth Tokens and click Generate Token
+  b. On the left side of the page, click Auth Tokens and click Generate Token.
 
    ![](images/auth-token-region.png " ")
 
-  c. Enter "grabdish" in the description field and click Generate Token
+  c. Enter "grabdish" in the description field and click Generate Token.
 
    ![](images/generate-auth-token.png " ")
 
@@ -105,11 +107,11 @@ Click the Cloud Shell icon in the top-right corner of the Console.
 
    ![](images/generated-auth-token-value.png " ")
 
-  e. Paste the Auth Token when requested by Setup.
+  e. Paste the Auth Token when requested by Setup. **Note**: The token is not displayed. Press Enter after pasting the token.
 
   f. Click Close to close the Generate Token dialog.
 
-5. The setup will ask you to enter an Admin password for the databases.  For simplicity, the same password will be used for both the Order and Inventory databases.  Database passwords must be 12 to 30 characters and contain at least one uppercase letter, one lowercase letter, and one number. The password cannot contain the double quote (") character or the word "admin".
+5. The setup will ask you to enter an Admin password for the databases.  For simplicity, the same password will be used for both the Order and Inventory databases.  Database passwords must be 12 to 30 characters and contain at least one uppercase letter, one lowercase letter, and one number. The password cannot contain the double quote (") character or the word "admin". **Note**: The passwords typed are not displayed.
 
 6. The setup will also ask you to enter a UI password that will be used to enter the microservice frontend user interface.  Make a note of the password as you will need it later.  The UI password must be 8 to 30 characters.
 
@@ -133,7 +135,7 @@ ls -al $GRABDISH_LOG
 </copy>
 ```
 
-Once the setup has completed you are ready to [move on to Lab 2](#next).  Note, the non-java-builds.sh script may continue to run even after the setup has completed.  The non-Java builds are only required in Lab 3 and so we can continue with Lab 2 while the builds continue in the background.
+Once the setup has completed you are ready to move to the next lab.  Note, the non-java-builds.sh script may continue to run even after the setup has completed.  The non-Java builds are only required in Lab 3 and so we can continue with Lab 2 while the builds continue in the background.
 
 ## Acknowledgements
 
